@@ -6,8 +6,8 @@ title:  Team
 # {{ page.title }}
 
 
-## USER 1
-***UCI Net ID***: ucinetid1
+## Filip Kyle Velasquez
+***UCI Net ID***: fkvelasq
 
 ## USER 2
 ***UCI Net ID***: ucinetid2
