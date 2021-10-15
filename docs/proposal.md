@@ -18,6 +18,9 @@ We will write a series of unit tests and integration tests to verify the correct
 
 For the sanity case, we can benchmark the model against a classical RL algorithm on a practical task such as maze-solver, and compare them in terms of two metrics: the speed and the performance (sum of discounted rewards). We will simulate the quantum algorithm through parallel processing and record the overall time. In principle, the number of processers needed grows exponentially to the number of qubits, but since our task is small it's durable by a classical computer.
 
+## Appointment
+3:45pm - 4:00pm, Tuesday, October 19, 2021
+
 ## Citations
 [1] P. W. Shor, SIAM Journal on Computing 26, 1095-7111 (1997) \
 [2] D. Dong, et al, IEEE Transactions on Systems, Man, and Cybernetics, Part B (Cybernetics), 1207–1220 (2008) \
