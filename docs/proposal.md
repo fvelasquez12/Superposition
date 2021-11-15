@@ -14,7 +14,12 @@ Specifically, we will review the QRL models proposed so far, pick the most promi
 MDP-based Quantum Reinforcement Learning
 
 ## Evaluation Plan
-We will write a series of unit tests and integration tests to verify the correctness of the algorithm. In addition, we will apply the algorithm to a more practical task such as maze-solver. We will alsol feed the algorithm on small tasks to real quantum devices (such as IBM-Melbourne) and compare it to the classical simulation of the algorithm. We then examine the effects of quantum noises on the algorithm by comparing the performance. If time permits, we can benchmark the model against a classical RL algorithm on the same task, and compare the speed and performance.
+We will write a series of unit tests and integration tests to verify the correctness of the algorithm. The number of unit tests should ideally be at least as many as the functions we have, and the number of integration tasks should be equal to the number of integrated tasks we need to perform. We will also feed the algorithm on small tasks to real quantum devices (such as IBM-Melbourne) and record the fidelity of the outputs. We can then examine how quantum noises, including error per gate, decoherence, qubit relaxation, and so on, affect the performance of the algorithm.
+
+For the sanity case, we can benchmark the model against a classical RL algorithm on a practical task such as maze-solver, and compare them in terms of two metrics: the speed and the performance (sum of discounted rewards). We will simulate the quantum algorithm through parallel processing and record the overall time. In principle, the number of processers needed grows exponentially to the number of qubits, but since our task is small it's durable by a classical computer.
+
+## Appointment
+3:45pm - 4:00pm, Tuesday, October 19, 2021
 
 ## Citations
 [1] P. W. Shor, SIAM Journal on Computing 26, 1095-7111 (1997) \

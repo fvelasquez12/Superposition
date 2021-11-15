@@ -9,8 +9,8 @@ title:  Team
 ## Filip Kyle Velasquez
 ***UCI Net ID***: fkvelasq
 
-## USER 2
-***UCI Net ID***: ucinetid2
+## Chris Chen
+***UCI Net ID***: jielunc
 
-## USER 3
-***UCI Net ID***: ucinetid3
+## Ken Zhou
+***UCI Net ID***: kxzhou
