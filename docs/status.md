@@ -3,12 +3,12 @@ layout: default
 title: status
 ---
 
-##Project Summary
+## Project Summary
 
-##Approach
+## Approach
 
-##Evaluation
+## Evaluation
 
-##Remaining Goals and Challenges
+## Remaining Goals and Challenges
 
-##Resources Used
+## Resources Used
