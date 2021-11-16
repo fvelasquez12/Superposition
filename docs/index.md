@@ -7,8 +7,8 @@ Source code: https://github.com/fvelasquez12/QuantumML
 
 Reports:
 
-- [Proposal](proposal.html)
-- [Status](status.html)
+- [Proposal](https://fvelasquez12.github.io/QuantumML/proposal.html)
+- [Status](https://fvelasquez12.github.io/QuantumML/status.html)
 - [Final](final.html)
 
 What's Markdown (`.md`)?
