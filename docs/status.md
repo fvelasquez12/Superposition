@@ -54,6 +54,10 @@ We adopted codes from PyTorch’s tutorials [4] and apply our quantum model to i
 
 ## Evaluation
 
+<img src="https://github.com/fvelasquez12/Superposition/blob/main/docs/assets/images/QRLafter10.PNG">
+
+<img src="https://github.com/fvelasquez12/Superposition/blob/main/docs/assets/images/QRLafter100.PNG">
+
 ![3291d6b8-2636-4b27-aff7-048633c172e1](https://user-images.githubusercontent.com/31495624/142091337-b081bc49-ab30-4fa5-8923-3b1a465206e4.png)
 
 ![image](https://user-images.githubusercontent.com/31495624/142092049-e78b4376-d81e-4987-9341-b0c651d3112d.png)
