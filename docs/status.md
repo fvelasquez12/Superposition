@@ -3,6 +3,9 @@ layout: default
 title: status
 ---
 
+## Video
+<video src='https://youtu.be/VSv4HoSgJe' width=500/>
+
 ## Project Summary
 Quantum computers are machines that use quantum phenomena such as superposition and entanglement to perform computation. They are believed to solve certain problems substantially faster than classical computers. The most famous quantum algorithm is Shor’s factoring algorithm which has exponential speed-up over any existing classical algorithm [1].
 
@@ -93,3 +96,5 @@ Based on our experience so far, the biggest challenge that we will face and have
 [2] Parametrized Quantum Circuits for Reinforcement Learning, tensorflow, https://www.tensorflow.org/quantum/tutorials/quantum_reinforcement_learning \
 [3] Jerbi, et al, Variational quantum policies for reinforcement learning, https://arxiv.org/abs/2103.05577 \
 [4] Reinforcement Learning (DQN) Tutorial, PyTorch. https://pytorch.org/tutorials/intermediate/reinforcement_q_learning.html
+
+
