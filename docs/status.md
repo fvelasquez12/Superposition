@@ -54,9 +54,9 @@ We adopted codes from PyTorch’s tutorials [4] and apply our quantum model to i
 
 ## Evaluation
 
-![3291d6b8-2636-4b27-aff7-048633c172e1](https://user-images.githubusercontent.com/31495624/142091337-b081bc49-ab30-4fa5-8923-3b1a465206e4.png)
+<img width="800" alt="qiskit_PQC_circuit" src=https://user-images.githubusercontent.com/31495624/142091337-b081bc49-ab30-4fa5-8923-3b1a465206e4.png">
 
-![image](https://user-images.githubusercontent.com/31495624/142092049-e78b4376-d81e-4987-9341-b0c651d3112d.png)
+<img width="500" alt="tensor" src=https://user-images.githubusercontent.com/31495624/142092049-e78b4376-d81e-4987-9341-b0c651d3112d.png">
 
 ![Plot showing steps taken after 10 episodes](assets/images/QRLafter10.PNG)
 
