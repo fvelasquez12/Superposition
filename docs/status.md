@@ -77,7 +77,7 @@ However, as the training continues, the overall positive trend didn’t seem to 
 
 ![Plot showing steps taken after 100 episodes](assets/images/QRLafter100.PNG)
 
-The algorithm is very slow because we need to perform a classical simulation of the quantum circuit at each step, and the 100 episodes took around 20 hours to run. For now, it is not sufficient to verify the correctness of the algorithm yet, and this is something we’ll keep working on.
+The algorithm is very slow because we need to perform a classical simulation of the quantum circuit at each step, and the 100 episodes took around 20 hours to run. For now, it is not sufficient to verify the correctness of the algorithm yet, and this is something we’ll keep working on. However, as we could see our layers' outputs have already been correctly implemented, so we believe it only requires more episodes to generate better results.
 
 
 ## Remaining Goals and Challenges
