@@ -12,13 +12,11 @@ While the most promising direction is to run the algorithm implemented in Qiskit
 
 ## Approach
 
-<img src="https://user-images.githubusercontent.com/31495624/142090910-1eea063b-cda0-44aa-a4fd-59252fa381f4.png" width="600">
+![image](https://user-images.githubusercontent.com/31495624/142090910-1eea063b-cda0-44aa-a4fd-59252fa381f4.png)
 
-<img src="https://user-images.githubusercontent.com/31495624/142090880-37d8fc91-dcd4-434b-b2f3-2f04293f503f.png" width="600">
+![image](https://user-images.githubusercontent.com/31495624/142090880-37d8fc91-dcd4-434b-b2f3-2f04293f503f.png)
 
-<img src="https://user-images.githubusercontent.com/31495624/142091522-7133f584-8b47-4ddc-bbd4-098e4287f90d.png" width="600">
-
-<img src="https://user-images.githubusercontent.com/31495624/142091840-f2ecfb57-ff1a-4277-a909-6e1efd13aab7.png" width="600">
+![image](https://user-images.githubusercontent.com/31495624/142091522-7133f584-8b47-4ddc-bbd4-098e4287f90d.png)
 
 <img width="513" alt="1637118928(1)" src="https://user-images.githubusercontent.com/31495624/142129427-1fe6b77c-1388-4279-8c67-160a1cf99b6d.png">
 
@@ -26,7 +24,13 @@ While the most promising direction is to run the algorithm implemented in Qiskit
 
 ![image](https://user-images.githubusercontent.com/31495624/142129372-c1113da3-f4ae-4334-8923-811888f9888f.png)
 
-<img width="621" alt="1637119800(1)" src="https://user-images.githubusercontent.com/31495624/142129586-68deee56-f5dc-4bb3-8691-0657c838caa5.png">
+![image](https://user-images.githubusercontent.com/31495624/142130620-94fc4abb-d1d8-4b42-9cee-f5c41b9f0a81.png)
+
+![image](https://user-images.githubusercontent.com/31495624/142130936-a697876d-7c1b-43de-abdd-8d75613f39e4.png)
+
+![image](https://user-images.githubusercontent.com/31495624/142129586-68deee56-f5dc-4bb3-8691-0657c838caa5.png)
+
+![image](https://user-images.githubusercontent.com/31495624/142130952-5929a7d0-3813-4b7e-bed0-abcdb6bf9e15.png)
 
 ## Evaluation
 
