@@ -59,5 +59,11 @@ We adopted codes from PyTorch’s tutorials [4] and apply our quantum model to i
 ![image](https://user-images.githubusercontent.com/31495624/142092049-e78b4376-d81e-4987-9341-b0c651d3112d.png)
 
 ## Remaining Goals and Challenges
+In the next few weeks, we plan to compare the QRL to its classical counterparts. As of now, our prototype only plots the length of each episode and its 100 episode averages. This would not be enough to provide a sufficient evaluation of the algorithm. Therefore, we plan to add more points of comparison. This would include adding a graph to show the score for each episode along with its 100 episode averages and possible other similar graphs if time allows.
+
+Furthermore, we plan to implement or find an implementation of the QRL’s classical counterpart in order to have a baseline to compare to. The classical Q-learning implementation will allow us to gauge if the QRL algorithm is working properly and how well it works. Afterwards, if we can, we will try to apply both the QRL and classical algorithms onto another task and compare those results.
+
+Based on our experience so far, the biggest challenge that we will face and have been facing is the amount of time that it takes to run and train the QRL agent. Currently, it takes about 20 continuous hours, assuming that nothing else occurs that would slow down the program. This issue will pose a large problem due to the limited time frame that we have, limiting the number of runs that are possible. Some possible solutions that we might try include: changing the data types of our data, reducing the number of training episodes, or making functions less complex.      
+
 
 ## Resources Used
