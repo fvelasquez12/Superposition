@@ -40,11 +40,11 @@ while it is proposed in [3] a more general measurement under arbitrary Hermitian
 
 <img width="500" alt="obs_layer" src="https://user-images.githubusercontent.com/31495624/142129465-3afa6c50-7b32-4a8d-a27d-8bc02e25d9ad.png">
 
-where |Pa| is the sum of digits (number of 1s) in the associated action’s binary representation. More general transformations will be implemented in the future. Therefore, our policy will have this underlying flow: 
+where \|Pa\| is the sum of digits (number of 1s) in the associated action’s binary representation. More general transformations will be implemented in the future. Therefore, our policy will have this underlying flow: 
 
 <img width="500" alt="our_flow" src="https://user-images.githubusercontent.com/31495624/142132457-1a83c44c-01d5-4e14-8e0e-afc330a39602.png">
 
-The output of the observable layer is the probability distribution π(a|s), which is determined by assigning qubits to each action. For example, if there are 4 qubits q1, q2, q3, q4 and 2 possible actions a1, a2 for each state, then the q1 and q2’s measurement result will be mapped to π(a1|s) and q3 and q4’s will be mapped to π(a2|s). Notice because our PQC already encodes the scaling/weight parameters for the state, there’s no need to add another classical layer before PQC. 
+The output of the observable layer is the probability distribution π(a\|s), which is determined by assigning qubits to each action. For example, if there are 4 qubits q1, q2, q3, q4 and 2 possible actions a1, a2 for each state, then the q1 and q2’s measurement result will be mapped to π(a1\|s) and q3 and q4’s will be mapped to π(a2\|s). Notice because our PQC already encodes the scaling/weight parameters for the state, there’s no need to add another classical layer before PQC. 
 
 For our task, we decided to train the CartPole-v0 task from the OpenAI Gym. In this environment, a pole is attached by an un-actuated joint to a cart, which moves along a frictionless track. The system is controlled by applying a force of +1 or -1 to the cart. The pendulum starts upright, and the goal is to prevent it from falling over. A reward of +1 is provided for every timestep that the pole remains upright. The episode ends when the pole is more than 15 degrees from vertical, or the cart moves more than 2.4 units from the center.
 
@@ -63,7 +63,7 @@ Firstly, we verified the correctness of our PQC implementation by generating the
 
 You can see the state parameters s are multiplied to scaling parameters λ, and weight parameters Φ are put into the entangling layers. For now we are checking the diagram manually, but later we will write a series of unit tests to verify the circuit construction process.
 
-We also verified the implementation of the observable layer. We implement it as computing the dot product between a “mask” vector and the outputs of the PQC circuit. The projective measurements of PQC should yield probabilities over computational basis states |0000>, |0001>, |0010>, …, |1111>, and let’s denote them as |ijkl> where i, j, k, l ∈ {0, 1} and d(ijkl) as the base-10 representation of binary number ijkl. Based on our equation of Hermitian Z observables, the d(ijkl)-th element in the first action’s mask vector is 1 if k⊕l=0, and -1 if k⊕l = 1, and the d(ijkl)-th elements in the second action’s mask vector is 1 if i⊕j=0, and -1 if i⊕j = 1. Notice k and l correspond to the first two qubits because Qiskit employs the little-endian convention. We compared this with the mask vectors generated when creating the observable layer:
+We also verified the implementation of the observable layer. We implement it as computing the dot product between a “mask” vector and the outputs of the PQC circuit. The projective measurements of PQC should yield probabilities over computational basis states \|0000>, \|0001>, \|0010>, …, \|1111>, and let’s denote them as \|ijkl> where i, j, k, l ∈ {0, 1} and d(ijkl) as the base-10 representation of binary number ijkl. Based on our equation of Hermitian Z observables, the d(ijkl)-th element in the first action’s mask vector is 1 if k⊕l=0, and -1 if k⊕l = 1, and the d(ijkl)-th elements in the second action’s mask vector is 1 if i⊕j=0, and -1 if i⊕j = 1. Notice k and l correspond to the first two qubits because Qiskit employs the little-endian convention. We compared this with the mask vectors generated when creating the observable layer:
 
 <img width="800" alt="tensor" src="https://user-images.githubusercontent.com/31495624/142092049-e78b4376-d81e-4987-9341-b0c651d3112d.png">
 
