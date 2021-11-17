@@ -17,6 +17,6 @@ Quantum computers are machines that use quantum phenomena such as superposition 
 This diagram shows how the quantum circuit would fit into the algorithm. <br>
 
 
-Relevant Resources:
+### Relevant Resources:
 - [TensorFlow Quantum Reinforcement Learning Tutorial](https://www.tensorflow.org/quantum/tutorials/quantum_reinforcement_learning)
 - [Hybrid quantum-classical Neural Networks with PyTorch and Qiskit](https://qiskit.org/textbook/ch-machine-learning/machine-learning-qiskit-pytorch.html) 
