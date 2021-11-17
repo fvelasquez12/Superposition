@@ -40,17 +40,17 @@ while it is proposed in [3] a more general measurement under arbitrary Hermitian
 
 where |Pa| is the sum of digits (number of 1s) in the associated action’s binary representation. Therefore, our policy will have this underlying flow: 
 
-![image](https://user-images.githubusercontent.com/31495624/142129372-c1113da3-f4ae-4334-8923-811888f9888f.png)
+![image](https://user-images.githubusercontent.com/31495624/142132457-1a83c44c-01d5-4e14-8e0e-afc330a39602.png)
 
 Notice because our PQC already encodes the scaling/weight parameters for the state, there’s no need to add another classical layer before PQC.
+
 For our task, we decided to train the CartPole-v0 task from the OpenAI Gym. In this environment, a pole is attached by an un-actuated joint to a cart, which moves along a frictionless track. The system is controlled by applying a force of +1 or -1 to the cart. The pendulum starts upright, and the goal is to prevent it from falling over. A reward of +1 is provided for every timestep that the pole remains upright. The episode ends when the pole is more than 15 degrees from vertical, or the cart moves more than 2.4 units from the center.
 
 <img width="332" alt="1637121163(1)" src="https://user-images.githubusercontent.com/31495624/142131593-93d40202-61d6-4076-95d7-447585e80444.png">
 
-We adopted codes from PyTorch’s tutorials [4]. In this code, the loss is calculated as Huber loss, which is implemented in PyTorch already. We could simply apply the following code for our gradient optimization problem:
+We adopted codes from PyTorch’s tutorials [4]. In this code, the Huber loss is used for optimization, which is implemented in PyTorch already. We could simply apply the following code without actually coding the gradient algorithm ourselves:
 
 ![image](https://user-images.githubusercontent.com/31495624/142129586-68deee56-f5dc-4bb3-8691-0657c838caa5.png)
-
 
 ## Evaluation
 
