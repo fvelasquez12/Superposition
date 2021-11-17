@@ -54,13 +54,13 @@ We adopted codes from PyTorch’s tutorials [4] and apply our quantum model to i
 
 ## Evaluation
 
-![10episodeplot](assets/images/QRLafter10.PNG)
-
-![100episodeplot](assets/images/QRLafter100.PNG)
-
 ![3291d6b8-2636-4b27-aff7-048633c172e1](https://user-images.githubusercontent.com/31495624/142091337-b081bc49-ab30-4fa5-8923-3b1a465206e4.png)
 
 ![image](https://user-images.githubusercontent.com/31495624/142092049-e78b4376-d81e-4987-9341-b0c651d3112d.png)
+
+![Plot showing steps taken after 10 episodes](assets/images/QRLafter10.PNG)
+
+![Plot showing steps taken after 100 episodes](assets/images/QRLafter100.PNG)
 
 ## Remaining Goals and Challenges
 In the next few weeks, we plan to compare the QRL to its classical counterparts. As of now, our prototype only plots the length of each episode and its 100 episode averages. This would not be enough to provide a sufficient evaluation of the algorithm. Therefore, we plan to add more points of comparison. This would include adding a graph to show the score for each episode along with its 100 episode averages and possible other similar graphs if time allows.
