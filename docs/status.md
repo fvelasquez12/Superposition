@@ -34,11 +34,11 @@ where one adopts a neural network-like structure with one layer replaced by the 
 
 <img width="513" alt="1637118928(1)" src="https://user-images.githubusercontent.com/31495624/142129427-1fe6b77c-1388-4279-8c67-160a1cf99b6d.png">
 
-while it is proposed in [3] a more general measurement under arbitrary Hermitian observable is required. Therefore, we add an “observable layer” directly after PQC that applies this transformation. For now, we only consider the Hermitian Z operator as the observable, and we derived such mapping:
+while it is proposed in [3] a more general measurement under arbitrary Hermitian observable is required. Therefore, we add an “observable layer” directly after PQC that transforms the projective measurement results into general Hermitain obervables. For now, we only consider the Hermitian Z operator as the observable, and we derived such mapping:
 
 ![image](https://user-images.githubusercontent.com/31495624/142129465-3afa6c50-7b32-4a8d-a27d-8bc02e25d9ad.png)
 
-where |Pa| is the sum of digits (number of 1s) in the associated action’s binary representation. Therefore, our policy will have this underlying flow: 
+where |Pa| is the sum of digits (number of 1s) in the associated action’s binary representation. More general transformations will be implemented in the future. Therefore, our policy will have this underlying flow: 
 
 ![image](https://user-images.githubusercontent.com/31495624/142132457-1a83c44c-01d5-4e14-8e0e-afc330a39602.png)
 
@@ -48,7 +48,7 @@ For our task, we decided to train the CartPole-v0 task from the OpenAI Gym. In t
 
 <img width="332" alt="1637121163(1)" src="https://user-images.githubusercontent.com/31495624/142131593-93d40202-61d6-4076-95d7-447585e80444.png">
 
-We adopted codes from PyTorch’s tutorials [4]. In this code, the Huber loss is used for optimization, which is implemented in PyTorch already. We could simply apply the following code without actually coding the gradient algorithm ourselves:
+We adopted codes from PyTorch’s tutorials [4] and apply our quantum model to it. In this code, the Huber loss is used for optimization, which is implemented in PyTorch already. We could simply apply the following code without actually coding the gradient algorithm ourselves:
 
 ![image](https://user-images.githubusercontent.com/31495624/142129586-68deee56-f5dc-4bb3-8691-0657c838caa5.png)
 
