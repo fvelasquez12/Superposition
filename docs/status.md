@@ -20,7 +20,7 @@ While the most promising direction is to run the algorithm implemented in Qiskit
 
 ![image](https://user-images.githubusercontent.com/31495624/142091840-f2ecfb57-ff1a-4277-a909-6e1efd13aab7.png)
 
-<img width="513" alt="1637118928(1)" src="https://user-images.githubusercontent.com/31495624/142129427-1fe6b77c-1388-4279-8c67-160a1cf99b6d.png">
+<img width="500" alt="1637118928(1)" src="https://user-images.githubusercontent.com/31495624/142129427-1fe6b77c-1388-4279-8c67-160a1cf99b6d.png">
 
 ![image](https://user-images.githubusercontent.com/31495624/142129465-3afa6c50-7b32-4a8d-a27d-8bc02e25d9ad.png)
 
