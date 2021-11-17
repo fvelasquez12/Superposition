@@ -54,9 +54,9 @@ We adopted codes from PyTorch’s tutorials [4] and apply our quantum model to i
 
 ## Evaluation
 
-![10episodeplot](docs/assets/images/QRLafter10.PNG)
+![10episodeplot](assets/images/QRLafter10.PNG)
 
-![100episodeplot](docs/assets/images/QRLafter100.PNG)
+![100episodeplot](assets/images/QRLafter100.PNG)
 
 ![3291d6b8-2636-4b27-aff7-048633c172e1](https://user-images.githubusercontent.com/31495624/142091337-b081bc49-ab30-4fa5-8923-3b1a465206e4.png)
 
