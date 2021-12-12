@@ -82,15 +82,6 @@ However, as the training continues, the overall positive trend didn’t seem to 
 
 The algorithm is very slow because we need to perform a classical simulation of the quantum circuit at each step, and the 100 episodes took around 20 hours to run. For now, it is not sufficient to verify the correctness of the algorithm yet, and this is something we’ll keep working on. However, as we could see our layers' outputs have already been correctly implemented, so we believe it only requires more episodes to generate better results.
 
-
-## Remaining Goals and Challenges
-In the next few weeks, we plan to compare the QRL to its classical counterparts. As of now, our prototype only plots the length of each episode and its 100 episode averages. This would not be enough to provide a sufficient evaluation of the algorithm. Therefore, we plan to add more points of comparison. This would include adding a graph to show the score for each episode along with its 100 episode averages and possible other similar graphs if time allows.
-
-Furthermore, we plan to implement or find an implementation of the QRL’s classical counterpart in order to have a baseline to compare to. The classical Q-learning implementation will allow us to gauge if the QRL algorithm is working properly and how well it works. Afterwards, if we can, we will try to apply both the QRL and classical algorithms onto another task and compare those results.
-
-Based on our experience so far, the biggest challenge that we will face and have been facing is the amount of time that it takes to run and train the QRL agent. Currently, it takes about 20 continuous hours, assuming that nothing else occurs that would slow down the program. This issue will pose a large problem due to the limited time frame that we have, limiting the number of runs that are possible. Some possible solutions that we might try include: changing the data types of our data, reducing the number of training episodes, or making functions less complex.      
-
-
 ## Resources Used / Citations
 [1] P. W. Shor, SIAM Journal on Computing 26, 1095-7111 (1997) \
 [2] Parametrized Quantum Circuits for Reinforcement Learning, tensorflow, https://www.tensorflow.org/quantum/tutorials/quantum_reinforcement_learning \
