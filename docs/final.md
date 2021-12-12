@@ -76,25 +76,25 @@ As one can see, the first vector alternates between -1 and 1, which makes sense 
 
 We then implemented a working example of CartPole-v1, for which we plotted the duration held (total reward) for every episode. In the first 10 episodes, the reward function had an overall positive trend:
 
-![10 Episodes of Quantum Reinforcement Learning](https://user-images.githubusercontent.com/45921165/145733806-7b78ba42-0547-41ce-8732-38a33bc14bf2.png)
+![10 Episodes of Quantum Reinforcement Learning](https://user-images.githubusercontent.com/45921165/145734456-7c80406e-d0e5-472d-b087-d1ed1e815b19.png)
 
 However, as the training continues, the overall positive trend did not hold:
 
-![200 Episodes of Quantum Reinforcement Learning](https://user-images.githubusercontent.com/45921165/145733562-b1ba08ba-f0b1-47bb-96b9-0be6a86def2b.png)
+![200 Episodes of Quantum Reinforcement Learning](https://user-images.githubusercontent.com/45921165/145734479-ef808952-fa3b-47c1-9052-ff4418bc793a.png)
 
 The algorithm is slow because we perform a classical simulation of the quantum circuit at each step, and the 200 episodes took approximately 48 hours to run. In a hypothetical quantum machine, the quantum circuit would be much faster to run. However, the behavior of this algorithm is consistent with other deep learning algorithms like that of the convolutional neural network as seen below:
 
-![200 Episodes of Classical Deep Q Learning Using Convolutional Neural Networks](https://user-images.githubusercontent.com/45921165/145733729-bf10eff4-c293-499d-b511-e2871ac41965.png)
+![200 Episodes of Classical Deep Q Learning Using Convolutional Neural Networks](https://user-images.githubusercontent.com/45921165/145734497-da01083a-6576-4900-94f5-c260daae3a89.png)
 
 As seen above, the classical algorithm also begins with seemly random noise. This algorithm, which performed faster due to being a classical algorithm, when run for 50,000 episodes, resulted in the below graph:
 
-![50,000 Episodes of Classical Deep Q Learning Using Convolutional Neural Networks](https://user-images.githubusercontent.com/45921165/145733920-8a9e1bd2-fef6-4fed-8609-000c6493e6d5.png)
+![50,000 Episodes of Classical Deep Q Learning Using Convolutional Neural Networks](https://user-images.githubusercontent.com/45921165/145734512-9e76f294-ff4d-480f-98f4-d93d6e28ef80.png)
 
 As can be seen above, there are points in time at which the algorithm performs well, lasting up to 400 steps. However, the algorithm begins performing poorly due to overtraining, before training itself to perform well again. However, this algorithm is different in that it is using a convolutional neural network to read visual input rather than being given the force vector directly. The algorithm additionally does not store prior states as input.
 
 The following simple linear neural network performed much better at the task given the force vector as input:
 
-![image](https://user-images.githubusercontent.com/45921165/145734270-5f9b3cf5-cc11-435a-8292-c5526790f55e.png)
+![50,000 Episodes of Deep Q Learning Using Simple Linear Neural Network](https://user-images.githubusercontent.com/45921165/145734571-adc90bfe-f6f1-4223-b92c-8c155f2c0d4e.png)
 
 ## Resources Used / Citations
 [1] P. W. Shor, SIAM Journal on Computing 26, 1095-7111 (1997) \
