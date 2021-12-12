@@ -74,13 +74,13 @@ We also verified the implementation of the observable layer. We implement it as 
 
 As one can see, the first vector alternates between -1 and 1, which makes sense if we look at the last two digits of 0000, 0001, 0010, …, and the second one also matches our results as the sign changes every 4 elements. Again, we will set up unit tests and include more test cases.
 
-We also have implemented a working example of CartPole, for which we have plotted the duration it holds (total reward) for every episode. In the first 10 episodes, the reward function had an overall positive trend:
+We then implemented a working example of CartPole-v1, for which we plotted the duration held (total reward) for every episode. In the first 10 episodes, the reward function had an overall positive trend:
 
 ![Plot showing steps taken after 10 episodes](assets/images/QRLafter10.PNG)
 
-However, as the training continues, the overall positive trend didn’t seem to hold:
+However, as the training continues, the overall positive trend did not hold:
 
-![Plot showing steps taken after 100 episodes](assets/images/QRLafter100.PNG)
+![Plot showing steps taken after 10 episodes](https://user-images.githubusercontent.com/45921165/145733562-b1ba08ba-f0b1-47bb-96b9-0be6a86def2b.png)
 
 The algorithm is very slow because we need to perform a classical simulation of the quantum circuit at each step, and the 100 episodes took around 20 hours to run. For now, it is not sufficient to verify the correctness of the algorithm yet, and this is something we’ll keep working on. However, as we could see our layers' outputs have already been correctly implemented, so we believe it only requires more episodes to generate better results.
 
