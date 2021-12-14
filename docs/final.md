@@ -49,7 +49,7 @@ where \|Pa\| is the sum of digits (number of 1s) in the associated action’s bi
 
 The output of the observable layer is the probability distribution π(a\|s), which is determined by assigning qubits to each action. For example, if there are 4 qubits q1, q2, q3, q4 and 2 possible actions a1, a2 for each state, then the q1 and q2’s measurement result will be mapped to π(a1\|s) and q3 and q4’s will be mapped to π(a2\|s). Notice because our PQC already encodes the scaling/weight parameters for the state, there’s no need to add another classical layer before PQC. 
 
-For our task, we decided to train the CartPole-v0 task from the OpenAI Gym. In this environment, a pole is attached by an un-actuated joint to a cart, which moves along a frictionless track. The system is controlled by applying a force of +1 or -1 to the cart. The pendulum starts upright, and the goal is to prevent it from falling over. A reward of +1 is provided for every timestep that the pole remains upright. The episode ends when the pole is more than 15 degrees from vertical, or the cart moves more than 2.4 units from the center.
+For our task, we decided to train the CartPole-v1 task from the OpenAI Gym. In this environment, a pole is attached by an un-actuated joint to a cart, which moves along a frictionless track. The system is controlled by applying a force of +1 or -1 to the cart. The pendulum starts upright, and the goal is to prevent it from falling over. A reward of +1 is provided for every timestep that the pole remains upright. The episode ends when the pole is more than 15 degrees from vertical, or the cart moves more than 2.4 units from the center.
 
 <img width="500" alt="cartpole" src="https://user-images.githubusercontent.com/31495624/142131593-93d40202-61d6-4076-95d7-447585e80444.png">
 
@@ -72,7 +72,7 @@ We also verified the implementation of the observable layer. We implement it as 
 
 <img width="800" alt="tensor" src="https://user-images.githubusercontent.com/31495624/142092049-e78b4376-d81e-4987-9341-b0c651d3112d.png">
 
-As one can see, the first vector alternates between -1 and 1, which makes sense if we look at the last two digits of 0000, 0001, 0010, …, and the second one also matches our results as the sign changes every 4 elements. Again, we will set up unit tests and include more test cases.
+As one can see, the first vector alternates between -1 and 1, which makes sense if we look at the last two digits of 0000, 0001, 0010, …, and the second one also matches our results as the sign changes every 4 elements.
 
 We then implemented a working example of CartPole-v1, for which we plotted the duration held (total reward) for every episode. In the first 10 episodes, the reward function had an overall positive trend:
 
@@ -86,7 +86,7 @@ The algorithm is slow because we perform a classical simulation of the quantum c
 
 ![200 Episodes of Classical Deep Q Learning Using Convolutional Neural Networks](https://user-images.githubusercontent.com/45921165/145734497-da01083a-6576-4900-94f5-c260daae3a89.png)
 
-As seen above, the classical algorithm also begins with seemly random noise. This algorithm, which performed faster due to being a classical algorithm, when run for 50,000 episodes, resulted in the below graph:
+As seen above, the classical algorithm also begins with seemingly random noise. This algorithm, which performed faster due to being a classical algorithm, resulted in the below graph when run for 50,000 episodes:
 
 ![50,000 Episodes of Classical Deep Q Learning Using Convolutional Neural Networks](https://user-images.githubusercontent.com/45921165/145734512-9e76f294-ff4d-480f-98f4-d93d6e28ef80.png)
 
