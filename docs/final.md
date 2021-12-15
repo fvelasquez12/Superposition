@@ -64,7 +64,7 @@ We also compare the quantum and CNN with a simple linear neural network with 256
 
 ### Training Loops
 
-Actions are chosen based on a policy (or chosen randomly if the batch size is greater than current steps), getting the next step sample from the gym environment. We record the results in the replay memory and also run optimization step on every iteration. Optimization picks a random batch from the replay memory to do training of the new policy. Notice there's an “older” target network used in optimization to compute the expected Q values, and it is updated occasionally to keep it current. Th
+Actions are chosen based on a policy (or chosen randomly if the batch size is greater than current steps), getting the next step sample from the gym environment. We record the results in the replay memory and also run optimization step on every iteration. Optimization picks a random batch from the replay memory to do training of the new policy. Notice there's an “older” target network used in optimization to compute the expected Q values, and it is updated occasionally to keep it current. This is an example of double q-learning, and through our experiments, without this target network the training often fails.
 
 <img width="500" alt="training_loop" src="https://user-images.githubusercontent.com/31495624/146124090-cf27bfe8-1472-474d-b041-061899a33877.png">
 
@@ -76,9 +76,6 @@ For our task, we decided to train the CartPole-v1 task from the OpenAI Gym. In t
 We adopted codes from PyTorch’s tutorials [4] and apply our quantum and classical models to it. In this code, the Huber loss is used for optimization, which is implemented in PyTorch already. We could simply apply the following code without actually coding the gradient algorithm ourselves:
 
 <img width="500" alt="opt_code" src="https://user-images.githubusercontent.com/31495624/146128734-d1180835-e563-4676-9c66-6d87e084045d.png">
-
-<img width="500" alt="app_opt_code" src="https://user-images.githubusercontent.com/31495624/142129586-68deee56-f5dc-4bb3-8691-0657c838caa5.png">
-
 
 ## Evaluation
 
