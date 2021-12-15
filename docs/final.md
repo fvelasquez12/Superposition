@@ -132,9 +132,10 @@ The following simple linear neural network performed much better at the task giv
 
 ![output_NN_batch_16](https://user-images.githubusercontent.com/31495624/146130941-7e1f839c-c0c5-40ba-bea3-462273e6d37b.png)
 
-
 Not only that, the training is very fast since it only takes 4 inputs. The performance has also already been demonstrated through our runs in testing the target network, thus this did not suprise us.
 
+### Evaluation Summary
+While we did not demonstrate that the PQC-based quantum reinforcement learning model works perfectly on the CartPole environment and results in a working agenet, we showed that it had a similar behaviour compared to classical reinforcement learning with convolutional neural network. The CNN model's plot resembles the quantum model's, and also fails to converge in the long run. However, we are able to succsessfully train the agent using a simple neural network, and demonstrated the necessity of using a target network in the optimization. It could be the case that the CartPole environment is hard for DQN in general.
 
 
 ## Resources Used / Citations
