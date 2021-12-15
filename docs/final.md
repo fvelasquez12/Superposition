@@ -102,7 +102,7 @@ which performs very well. The following is the loop without target network:
 
 ![without_targnet](https://user-images.githubusercontent.com/31495624/146131003-b773ee01-3ee9-421d-8df8-35a27e1e5e7b.png)
 
-which has a werid tendency to fall into the opposite side of the high-reward side. While we do not know the full theory behind this, we demonstrate the necessity of using target network through experiments. We will therefore use it throughout our future benchmark.
+which has a werid tendency to fall into the low-reward region constantly. While we do not know the full theory behind this, we demonstrate the necessity of using target network through experiments. We will therefore use it throughout our future benchmark.
 
 
 ### Performance of Quantum Reinforcement Learning
