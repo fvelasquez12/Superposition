@@ -114,7 +114,7 @@ However, as the training continues, the overall positive trend did not hold:
 
 ![200 Episodes of Quantum Reinforcement Learning](https://user-images.githubusercontent.com/45921165/145734479-ef808952-fa3b-47c1-9052-ff4418bc793a.png)
 
-The algorithm is slow because we perform a classical simulation of the quantum circuit at each step, and the 200 episodes took approximately 48 hours to run. In a hypothetical quantum machine, the quantum circuit would be much faster to run. 
+The algorithm is slow because we perform a classical simulation of the quantum circuit at each step, and the 200 episodes took approximately 48 hours to run. In a hypothetical quantum machine, the quantum circuit would be much faster to run. Therefore, our benchmark will also be based on the one with target network
 
 ### Performance of RL with Convolutional Neural Network
 The behavior of this algorithm is consistent with other deep learning algorithms like that of the convolutional neural network as seen below:
