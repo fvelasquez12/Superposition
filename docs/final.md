@@ -58,7 +58,7 @@ We compare the above algorithm to the algorithm used in [4], a convolutional neu
 <img width="500" alt="CNN" src="https://user-images.githubusercontent.com/31495624/146124418-6bca131a-4ee2-4f2d-8f16-d59fcca7bdee.png">
 
 ### Simple Neural Network
-We also compare the quantum and CNN with a simple linear neural network with 256 nodes using a force vector as the input. The code for constructing the model si as follows:
+We also compare the quantum and CNN with a simple linear neural network with 256 nodes using a force vector as the input. The code for constructing the model is as follows:
 
 <img width="500" alt="Simple_NN" src="https://user-images.githubusercontent.com/31495624/146124487-a1388f0c-d54f-4d64-a494-9ea1827939ad.png">
 
