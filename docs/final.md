@@ -94,7 +94,7 @@ As one can see, the first vector alternates between -1 and 1, which makes sense 
 
 
 ### Justification of Using the Target Network
-Before demonstrating the performaces of each algorithm, we want to ensure wether we want to use target network for all of our training. To test the necessity of using target network in deep Q-learning, we construct two simple NN loops: one with the target net and the other without target network, both with batch size 128. The one with target network updates at a frequency of 100 steps. We will train the two models using the CartPole environment for 50,000 episodes. As we can see, the following is the one with target network:
+Before demonstrating the performaces of each algorithm, we want to ensure wether we want to use target network for all of our trainings. To test the necessity of using target network in deep Q-learning, we construct two simple NN loops: one with the target net and the other without target network, both with batch size 128. The one with target network updates at a frequency of 100 steps. We will train the two models using the CartPole environment for 50,000 episodes. As we can see, the following is the one with target network:
 
 ![50,000 Episodes of Deep Q Learning Using Simple Linear Neural Network](https://user-images.githubusercontent.com/45921165/145734571-adc90bfe-f6f1-4223-b92c-8c155f2c0d4e.png)
 
@@ -102,7 +102,7 @@ which performs very well. The following is the loop without target network:
 
 ![without_targnet](https://user-images.githubusercontent.com/31495624/146131003-b773ee01-3ee9-421d-8df8-35a27e1e5e7b.png)
 
-which has a werid tendency to fall into the opposite side of the high-reward side. While we do not know the full theory behind this, we demonstrate the necessity of using target network through experiments.
+which has a werid tendency to fall into the opposite side of the high-reward side. While we do not know the full theory behind this, we demonstrate the necessity of using target network through experiments. We will therefore use it throughout our future benchmark.
 
 
 ### Performance of Quantum Reinforcement Learning
@@ -114,7 +114,7 @@ However, as the training continues, the overall positive trend did not hold:
 
 ![200 Episodes of Quantum Reinforcement Learning](https://user-images.githubusercontent.com/45921165/145734479-ef808952-fa3b-47c1-9052-ff4418bc793a.png)
 
-The algorithm is slow because we perform a classical simulation of the quantum circuit at each step, and the 200 episodes took approximately 48 hours to run. In a hypothetical quantum machine, the quantum circuit would be much faster to run. Therefore, our benchmark will also be based on the one with target network
+The algorithm is slow because we perform a classical simulation of the quantum circuit at each step, and the 200 episodes took approximately 48 hours to run. In a hypothetical quantum machine, the quantum circuit would be much faster to run. 
 
 ### Performance of RL with Convolutional Neural Network
 The behavior of this algorithm is consistent with other deep learning algorithms like that of the convolutional neural network as seen below:
@@ -128,12 +128,12 @@ As seen above, the classical algorithm also begins with seemingly random noise. 
 As can be seen above, there are points in time at which the algorithm performs well, lasting up to 400 steps. However, the algorithm begins performing poorly due to overtraining, before training itself to perform well again. However, this algorithm is different in that it is using a convolutional neural network to read visual input rather than being given the force vector directly. The algorithm additionally does not store prior states as input.
 
 ### Performance of RL with Simple Neural Netwrok
-The following simple linear neural network, to our suprise, performed much better at the task given the force vector as input:
+The following simple linear neural network performed much better at the task given the force vector as input:
 
 ![output_NN_batch_16](https://user-images.githubusercontent.com/31495624/146130941-7e1f839c-c0c5-40ba-bea3-462273e6d37b.png)
 
 
-Not only that, the training is very fast since it only takes 4 inputs.
+Not only that, the training is very fast since it only takes 4 inputs. The performance has also already been demonstrated through our runs in testing the target network, thus this did not suprise us.
 
 
 
