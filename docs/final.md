@@ -64,7 +64,7 @@ We also compare the quantum and CNN with a simple linear neural network with 256
 
 ### Training Loops
 
-Actions are chosen based on a policy (or chosen randomly if the batch size is greater than current steps), getting the next step sample from the gym environment. We record the results in the replay memory and also run optimization step on every iteration. Optimization picks a random batch from the replay memory to do training of the new policy. Notice there's an “older” target network used in optimization to compute the expected Q values, and it is updated occasionally to keep it current. This is an example of double q-learning, and through our experiments, without this target network the training often fails.
+Actions are chosen based on a policy (or chosen randomly if the batch size is greater than current steps), getting the next step sample from the gym environment. We record the results in the replay memory and also run optimization step on every iteration. Optimization picks a random batch from the replay memory to do training of the new policy. Notice there's an “older” target network used in optimization to compute the expected Q values, and it is updated occasionally to keep it current. This is an example of double q-learning, and through our experiments, without this target network the training often fails. We will justify this in our evaluation part
 
 <img width="500" alt="training_loop" src="https://user-images.githubusercontent.com/31495624/146124090-cf27bfe8-1472-474d-b041-061899a33877.png">
 
@@ -92,6 +92,19 @@ We also verified the implementation of the observable layer. We implement it as 
 
 As one can see, the first vector alternates between -1 and 1, which makes sense if we look at the last two digits of 0000, 0001, 0010, …, and the second one also matches our results as the sign changes every 4 elements.
 
+
+### Justification of Using the Target Network
+Before demonstrating the performaces of each algorithm, we want to ensure wether we want to use target network for all of our training. To test the necessity of using target network in deep Q-learning, we construct two simple NN loops: one with the target net and the other without target network, both with batch size 128. The one with target network updates at a frequency of 100 steps. We will train the two models using the CartPole environment for 50,000 episodes. As we can see, the following is the one with target network:
+
+![50,000 Episodes of Deep Q Learning Using Simple Linear Neural Network](https://user-images.githubusercontent.com/45921165/145734571-adc90bfe-f6f1-4223-b92c-8c155f2c0d4e.png)
+
+which performs very well. The following is the loop without target network:
+
+![without_targnet](https://user-images.githubusercontent.com/31495624/146131003-b773ee01-3ee9-421d-8df8-35a27e1e5e7b.png)
+
+which has a werid tendency to fall into the opposite side of the high-reward side. While we do not know the full theory behind this, we demonstrate the necessity of using target network through experiments.
+
+
 ### Performance of Quantum Reinforcement Learning
 We then implemented a working example of CartPole-v1, for which we plotted the duration held (total reward) for every episode. In the first 10 episodes, the reward function had an overall positive trend:
 
@@ -115,9 +128,14 @@ As seen above, the classical algorithm also begins with seemingly random noise. 
 As can be seen above, there are points in time at which the algorithm performs well, lasting up to 400 steps. However, the algorithm begins performing poorly due to overtraining, before training itself to perform well again. However, this algorithm is different in that it is using a convolutional neural network to read visual input rather than being given the force vector directly. The algorithm additionally does not store prior states as input.
 
 ### Performance of RL with Simple Neural Netwrok
-The following simple linear neural network performed much better at the task given the force vector as input:
+The following simple linear neural network, to our suprise, performed much better at the task given the force vector as input:
 
-![50,000 Episodes of Deep Q Learning Using Simple Linear Neural Network](https://user-images.githubusercontent.com/45921165/145734571-adc90bfe-f6f1-4223-b92c-8c155f2c0d4e.png)
+![output_NN_batch_16](https://user-images.githubusercontent.com/31495624/146130941-7e1f839c-c0c5-40ba-bea3-462273e6d37b.png)
+
+
+Not only that, the training is very fast since it only takes 4 inputs.
+
+
 
 ## Resources Used / Citations
 [1] P. W. Shor, SIAM Journal on Computing 26, 1095-7111 (1997) \
