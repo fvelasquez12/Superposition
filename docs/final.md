@@ -51,7 +51,17 @@ where \|Pa\| is the sum of digits (number of 1s) in the associated action’s bi
 The output of the observable layer is the probability distribution π(a\|s), which is determined by assigning qubits to each action. For example, if there are 4 qubits q1, q2, q3, q4 and 2 possible actions a1, a2 for each state, then the q1 and q2’s measurement result will be mapped to π(a1\|s) and q3 and q4’s will be mapped to π(a2\|s). Notice because our PQC already encodes the scaling/weight parameters for the state, there’s no need to add another classical layer before PQC. 
 
 ### Convolutional Neural Network
-We compare the above algorithm to the algorithm used in [4], a convolutional neural network with two hidden convolutional layers with an image of the environment as input and a linear layer for output, and a simple linear neural network with 256 nodes using a force vector as the input. The convolutional neural network takes the image's RGB channels as three separate input channels, and contains 16 nodes in the first layer. These channels then connect to 32 nodes in the second layer, which lead to another 32 in the third layer, with normalization performed in between each step. We then connect the network to a linear output layer.
+We compare the above algorithm to the algorithm used in [4], a convolutional neural network (CNN) with two hidden convolutional layers with an image of the environment as input and a linear layer for output. The convolutional neural network takes the image's RGB channels as three separate input channels, and contains 16 nodes in the first layer. These channels then connect to 32 nodes in the second layer, which lead to another 32 in the third layer, with normalization performed in between each step. We then connect the network to a linear output layer. In particular, we employed the code in [4] to construct our model:
+
+<img width="500" alt="CNN" src="https://user-images.githubusercontent.com/31495624/146124418-6bca131a-4ee2-4f2d-8f16-d59fcca7bdee.png">
+
+### Simple Neural Network
+We also compare the quantum and CNN with a simple linear neural network with 256 nodes using a force vector as the input. The code for constructing the model si as follows:
+
+<img width="500" alt="Simple_NN" src="https://user-images.githubusercontent.com/31495624/146124487-a1388f0c-d54f-4d64-a494-9ea1827939ad.png">
+
+### Training Loops
+<img width="500" alt="training_loop" src="https://user-images.githubusercontent.com/31495624/146124090-cf27bfe8-1472-474d-b041-061899a33877.png">
 
 ### Environment and Optimization Method
 For our task, we decided to train the CartPole-v1 task from the OpenAI Gym. In this environment, a pole is attached by an un-actuated joint to a cart, which moves along a frictionless track. The system is controlled by applying a force of +1 or -1 to the cart. The pendulum starts upright, and the goal is to prevent it from falling over. A reward of +1 is provided for every timestep that the pole remains upright. The episode ends when the pole is more than 15 degrees from vertical, or the cart moves more than 2.4 units from the center.
